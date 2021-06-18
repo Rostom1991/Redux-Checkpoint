@@ -9,6 +9,7 @@ const TodoFilter = () => {
             <button onClick={()=>dispatch({type:"show",payload:"all"})}>All</button>
             
             
+            
         </div>
     )
 }

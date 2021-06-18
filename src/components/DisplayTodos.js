@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import Update from './Update'
 
 const DisplayTodos = () => {
   const dispatch = useDispatch()
@@ -38,8 +39,9 @@ const DisplayTodos = () => {
                     <p style={todo.done === true ? { textDecoration: "line-through" } : {}} onClick={()=>taskState(todo.id)}>{todo.act}</p>
                     <div className="buttons">
                     <button onClick={() => deletefunc(todo.id)}>Delete</button>
-
-                    <button onClick={() => editfunc(todo.act)}>Edit</button></div>
+                      <Update id={todo.id} name={todo.act}/>
+                     
+                    </div>
 
                     
                   </div>

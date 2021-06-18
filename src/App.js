@@ -2,6 +2,7 @@ import './App.css';
 import Input from './components/Input'
 import DisplayTodos from './components/DisplayTodos'
 import TodoFilter from './components/todoFilter';
+import Update from './components/Update';
 function App() {
   return (
     <div className="App">
@@ -10,6 +11,8 @@ function App() {
       {/* {done} */}
 
       <DisplayTodos />
+    
+      
       <Input />
       <TodoFilter/>
 

@@ -13,6 +13,8 @@ const reducer = (state = initialState, { type, payload }) => {
             return ({todo: state.todo.map((task)=>task.id==payload?{...task,done:!task.done}:task)})
         case "show":
             return ({ ...state, show: payload })
+        case "update":
+            return ({ todo: [...state.todo].map((task) => task.id == payload.id ? {...task,act:payload.newTask }:task)})
         default:
             return(state)
 
